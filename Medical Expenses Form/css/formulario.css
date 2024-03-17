@@ -1,0 +1,325 @@
+/*General*/
+
+button.btn.btn-primary,
+button.btn.btn-primary:focus,
+button.btn.btn-primary:active {
+    background-color: #1abc88;
+    color: white;
+    border: none;
+}
+
+button.btn.btn-primary.next-step,
+button.btn.btn-primary.next-step:focus,
+button.btn.btn-primary.next-step:active {
+    background: #083a6c;
+}
+
+.wizard {
+    margin: 20px auto;
+    background: #fff;
+}
+
+.wizard .nav-tabs {
+    position: relative;
+    margin: 40px auto;
+    margin-bottom: 0;
+    border-bottom-color: #e0e0e0;
+}
+
+.wizard>div.wizard-inner {
+    position: relative;
+}
+
+.connecting-line {
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.wizard .nav-tabs>li.active>a,
+.wizard .nav-tabs>li.active>a:hover,
+.wizard .nav-tabs>li.active>a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+span.round-tab {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+span.round-tab i {
+    color: #555555;
+}
+
+.wizard li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #5bc0de;
+}
+
+.wizard li.active span.round-tab i {
+    color: #5bc0de;
+}
+
+span.round-tab:hover {
+    color: #333;
+    border: 2px solid #333;
+}
+
+.wizard .nav-tabs>li {
+    width: 33.33%;
+}
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
+}
+
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 47.66%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #5bc0de;
+}
+
+.wizard .nav-tabs>li a {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+
+.wizard .nav-tabs>li a:hover {
+    background: transparent;
+}
+
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 50px;
+}
+
+.wizard h3 {
+    margin-top: 0;
+}
+
+@media( max-width: 585px) {
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .wizard .nav-tabs>li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+}
+
+
+/*Tabla Planes*/
+
+table#tabla-planes thead {
+    font-weight: bold;
+    background: #5bc0de;
+    color: white;
+}
+
+table#tabla-planes td {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.detalles-hover {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    max-height: 50%;
+    bottom: 0;
+    opacity: 0;
+    -moz-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+table#tabla-planes td:hover .detalles-hover {
+    opacity: 1;
+    bottom: 0;
+}
+
+table#tabla-planes .comparar-container {
+    background: #e5e5e5;
+    padding: 5px 0 0;
+}
+
+table#tabla-planes .detalles-hover .btn {
+    padding: 5px 8px;
+    margin: 0;
+    background: #1abc88;
+    border: none;
+    color: #ffffff;
+    border-radius: 0;
+    font-weight: bold;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+input.comparar-checkbox {
+    width: 15px;
+    margin: 0;
+    padding: 0;
+    float: right;
+    height: 15px;
+    border-radius: 0px;
+    background-color: white;
+}
+
+.selected {
+    background-color: #337ab7;
+    color: white;
+}
+
+td.selected .detalles-hover {
+    opacity: 1;
+}
+
+td.empty-plan .glyphicon-remove {
+    color: red;
+    padding: 31px;
+    margin: 0;
+    line-height: 0;
+}
+
+td.empty-plan {
+    background: #f1f1f1;
+}
+
+.detalles-plan {
+    position: relative;
+    display: none;
+    padding: 1em;
+    margin: 1em auto;
+    max-width: 70%;
+    font-size: 13px;
+    border: solid 1px #767676;
+}
+
+.detalles-plan h2 {
+    margin: 0;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #818181;
+}
+
+.detalles-plan hr {
+    border-color: #a7a7a7;
+    margin: 8px 0;
+}
+
+.detalles-plan button.ver-detalles {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 3px;
+    background: transparent;
+    border: none;
+    color: dimgrey;
+}
+
+ul.detalle-lista li {
+    list-style: none;
+    margin-bottom: 6px;
+    border-bottom: solid 1px #dbdbdb;
+}
+
+ul.detalle-lista {
+    padding: 0 1em;
+}
+
+ul.detalle-lista li span.glyphicon {
+    color: #1abc88;
+}
+
+table#tabla-comparacion thead {
+    background: #dddddd;
+    text-align: center;
+    font-size: initial;
+    font-weight: bold;
+}
+
+table#tabla-comparacion {
+    font-size: 12px;
+}
+
+.comparacion-planes {
+    position: relative;
+    display: none;
+    margin-top: 18px;
+}
+
+.comparacion-planes button.comparar-planes {
+    position: absolute;
+    right: 0px;
+    background: transparent;
+    top: -18px;
+    padding: 0;
+    color: dimgrey;
+}
+
+table#tabla-comparacion tbody td button {
+    margin: 0 auto;
+    display: block;
+}
+
+table#tabla-comparacion tbody td {
+    border: solid 1px #dddddd;
+}
+
+
+/*Custom*/
+
+.form-group {
+    display: -webkit-box;
+}
